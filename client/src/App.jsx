@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import BottomNavbar from "./components/Navbar";
+import BottomNavbar from "./components/BottomNavbar";
 import Bottom from "./components/Bottom";
 
 
