@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import BottomNavbar from "./Components/Navbar";
-import Bottom from "./Components/Bottom";
+import Bottom from "./components/Bottom";
+
 
 import Home from "./pages/Home";
 import Cart from "./pages/Cart"; // Changed from Chat
