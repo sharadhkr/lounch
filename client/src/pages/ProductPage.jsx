@@ -5,7 +5,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { motion } from 'framer-motion';
 import { FaHeart, FaShoppingCart, FaArrowLeft, FaPlus, FaMinus, FaChevronLeft, FaChevronRight, FaRuler, FaWeightHanging, FaTag, FaUser, FaBoxOpen, FaUndo, FaMoneyBillWave, FaCreditCard } from 'react-icons/fa';
 import placeholderImage from '../assets/logo.png';
-import RelatedProducts from '../Components/RelatedProducts';
+import RelatedProducts from '../components/RelatedProducts';
 
 // Animation Variants
 const pageVariants = { initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0, transition: { duration: 0.4 } } };

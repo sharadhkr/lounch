@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MdArrowBack, MdShoppingCart } from 'react-icons/md';
 import { FaSpinner } from 'react-icons/fa';
 import axios from '../useraxios';
-import CartProductCard from '../Components/CartProductCard'; // Adjust path
-import ProductCardSkeleton from '../Components/ProductCardSkeleton'; // Adjust path
+import CartProductCard from '../components/CartProductCard'; // Adjust path
+import ProductCardSkeleton from '../components/ProductCardSkeleton'; // Adjust path
 import agroLogo from '../assets/logo.png';
 
 const fadeIn = { initial: { opacity: 0 }, animate: { opacity: 1, transition: { duration: 0.9, ease: 'easeInOut' } } };
