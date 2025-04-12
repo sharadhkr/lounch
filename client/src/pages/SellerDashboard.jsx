@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 import axios from '../selleraxios';
-import NavBar from '../components/seller/NavBar';
 import Overview from '../components/seller/Overview';
 import Products from '../components/seller/Products';
 import Orders from '../components/seller/Orders';
+import NavBar from '../components/seller/NavBar';
 import Profile from '../components/seller/Profile';
 
 const SellerDashboard = () => {
