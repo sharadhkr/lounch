@@ -6,7 +6,7 @@ import { Mic, Send, X } from 'lucide-react';
 import axios from '../axios';
 import toast from 'react-hot-toast';
 
-const AIAssistantModall = ({ isOpen, onClose }) => {
+const AIAssistantModal = ({ isOpen, onClose }) => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const [input, setInput] = useState('');
@@ -224,4 +224,4 @@ const AIAssistantModall = ({ isOpen, onClose }) => {
   );
 };
 
-export default AIAssistantModall;
+export default AIAssistantModal;
