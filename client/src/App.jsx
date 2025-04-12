@@ -1,50 +1,52 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import BottomNavbar from './components/BottomNavbar';
-import Bottom from './components/Bottom';
-import Home from './pages/Home';
-import Cart from './pages/Cart';
-import LoginRegister from './pages/LoginRegister';
-import SellerAuth from './pages/SellerAuth';
-import SellerDashboard from './pages/SellerDashboard';
-import UserDashboard from './pages/UserDashboard';
-import AdminAuth from './pages/Adminauth';
-import AdminDashboard from './pages/AdminDashboard';
-import WishlistPage from './pages/WishlistPage';
-import CategoryPage from './pages/CategoryPage';
-import OwnerProfilePage from './pages/OwnerProfilePage';
-import ProductPage from './pages/ProductPage';
-import CheckoutPage from './pages/CheckoutPage';
-import OrderConfirmation from './pages/OrderConfirmation';
-import OrderDetails from './pages/OrderDetails';
-import SellerProducts from './pages/SellerProducts';
-import SellerOrders from './pages/sd';
-import SearchResults from './pages/SearchResults';
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import BottomNavbar from "./Components/BottomNavbar";
+import Bottom from "./components/Bottom";
+
+
+import Home from "./pages/Home";
+import Cart from "./pages/Cart"; // Changed from Chat
+import LoginRegister from "./pages/LoginRegister";
+import SellerAuth from "./pages/SellerAuth";
+import SellerDashboard from "./pages/SellerDashboard";
+import UserDashboard from "./pages/UserDashboard";
+import AdminAuth from "./pages/Adminauth";
+import AdminDashboard from "./pages/AdminDashboard";
+import WishlistPage from "./pages/WishlistPage";
+import CategoryPage from "./pages/CategoryPage";
+import OwnerProfilePage from "./pages/OwnerProfilePage";
+import ProductPage from "./pages/ProductPage";
+import CheckoutPage from "./pages/CheckoutPage";
+import OrderConfirmation from "./pages/OrderConfirmation";
+import OrderDetails from "./pages/OrderDetails";
+import SellerProducts from "./pages/SellerProducts";
+import SellerOrders from "./pages/sd"; // Consider renaming to SellerOrders.jsx
+import SearchResults from "./pages/SearchResults";
 
 const Layout = ({ children }) => {
   const location = useLocation();
 
+  
   const userRoutes = [
-    '/',
-    '/cart',
-    '/wishlist',
-    '/dashboard',
-    '/category/:categoryName',
-    '/seller/:sellerId',
-    '/product/:productId',
-    '/seller/products',
-    '/seller/orders',
-    '/order/:orderId',
-    '/search',
+    "/",
+    "/cart",
+    "/wishlist",
+    "/dashboard",
+    "/category/:categoryName",
+    "/seller/:sellerId",
+    "/product/:productId",
+    "/seller/products",
+    "/seller/orders",
+    "/order/:orderId"
   ];
 
   const matchesRoutePattern = (path, pattern) => {
-    const pathSegments = path.split('/').filter(Boolean);
-    const patternSegments = pattern.split('/').filter(Boolean);
+    const pathSegments = path.split("/").filter(Boolean);
+    const patternSegments = pattern.split("/").filter(Boolean);
 
     if (pathSegments.length !== patternSegments.length) return false;
 
     return patternSegments.every((segment, index) => {
-      if (segment.startsWith(':')) return pathSegments[index] !== undefined;
+      if (segment.startsWith(":")) return pathSegments[index] !== undefined;
       return segment === pathSegments[index];
     });
   };
@@ -76,15 +78,18 @@ function App() {
         <Route path="/order/:orderId" element={<Layout><OrderDetails /></Layout>} />
         <Route path="/category/:categoryName" element={<Layout><CategoryPage /></Layout>} />
         <Route path="/seller/:sellerId" element={<Layout><OwnerProfilePage /></Layout>} />
+        <Route path="/order/:orderId" element={<Layout><OrderDetails/></Layout>} />
         <Route path="/product/:productId" element={<Layout><ProductPage /></Layout>} />
-        <Route path="/search" element={<Layout><SearchResults /></Layout>} />
+        <Route path="/search" element={<Layout><SearchResults/></Layout>} />
         {/* Routes without Layout */}
+        {/* Routes without Layout */}
+
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/checkout/:productId" element={<CheckoutPage />} />
         <Route path="/order-confirmation" element={<OrderConfirmation />} />
         <Route path="/login" element={<LoginRegister />} />
-        <Route path="/seller/login" element={<SellerAuth />} />
-        <Route path="/seller/dashboard" element={<SellerDashboard />} />
+        <Route path="/seller/login" element={<SellerAuth />} /> {/* Fixed typo */}
+        <Route path="/seller/dashboard" element={<SellerDashboard />} /> {/* Fixed typo */}
         <Route path="/admin/login" element={<AdminAuth />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
       </Routes>

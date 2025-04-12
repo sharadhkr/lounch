@@ -4,8 +4,8 @@ import toast, { Toaster } from 'react-hot-toast';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MdArrowBack, MdFavorite } from 'react-icons/md';
 import axios from '../useraxios';
-import WishlistProductCard from '../components/WishlistProductCard'; // Adjust path as needed
-import ProductCardSkeleton from '../components/ProductCardSkeleton'; // Adjust path as needed
+import WishlistProductCard from '../Components/WishlistProductCard'; // Adjust path as needed
+import ProductCardSkeleton from '../Components/ProductCardSkeleton'; // Adjust path as needed
 
 // Animation Variants
 const fadeIn = { initial: { opacity: 0 }, animate: { opacity: 1, transition: { duration: 0.9, ease: 'easeInOut' } } };
