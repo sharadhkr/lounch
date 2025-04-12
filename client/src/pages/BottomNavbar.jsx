@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Home, User, ShoppingCart, Heart } from 'lucide-react';
 import logo from '../assets/logo.png';
-import AIAssistantModal from './AIAssistantModal'; // Make sure this path is correct
+import AIAssistantModal from '../components/AIAssistantModal'; // Make sure this path is correct
 
 const tabs = [
   { path: '/', icon: <Home />, label: 'Home' },
