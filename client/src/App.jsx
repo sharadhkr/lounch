@@ -80,8 +80,9 @@ function App() {
         <Route path="/order/:orderId" element={<Layout><OrderDetails/></Layout>} />
         <Route path="/product/:productId" element={<Layout><ProductPage /></Layout>} />
         <Route path="/search" element={<Layout><SearchResults/></Layout>} />
-
         {/* Routes without Layout */}
+        {/* Routes without Layout */}
+
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/checkout/:productId" element={<CheckoutPage />} />
         <Route path="/order-confirmation" element={<OrderConfirmation />} />
